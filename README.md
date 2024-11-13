@@ -17,3 +17,24 @@ from sklearn import linear_model
 df= pd.read_excel('data.xlsx')
 df.columns = df.columns.str.strip()
 ```
+
+```sql
+%matplotlib inline
+plt.xlabel('Area(sqr ft)')
+plt.ylabel('Prices(US$)')
+plt.scatter(df.Area, df.Prices, color= 'red', marker= '+')
+plt.show()
+```
+
+```sql
+# Creating object for linear regression
+reg = linear_model.LinearRegression()
+reg.fit(df[['Area']], df.Prices)
+```
+
+```sql
+reg.predict([[3300]])
+```
+
+
+
