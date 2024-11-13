@@ -11,3 +11,9 @@ import numpy as np
 import matplotlib.pyplot as plt
 from sklearn import linear_model
 ```
+
+```sql
+#removing any extra spaces from the column names
+df= pd.read_excel('data.xlsx')
+df.columns = df.columns.str.strip()
+```
